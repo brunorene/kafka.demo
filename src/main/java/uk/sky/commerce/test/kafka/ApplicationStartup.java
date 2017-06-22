@@ -28,11 +28,11 @@ public class ApplicationStartup {
 	public void init() {
 		Executors.newScheduledThreadPool(2)
 			.schedule(() -> {
-				for (int i = 0; i < 10000; i++) {
-					kafkaTemplate.send("TOPIC2", "HELLO " + UUID.randomUUID() + " " + LocalDateTime.now());
+				for (int i = 0; i < 1_000_000; i++) {
+					kafkaTemplate.send("TOPIC5", "HELLO " + UUID.randomUUID() + " " + LocalDateTime.now());
 				}
 				log.info("*** messages sent ***");
-			}, 10, TimeUnit.SECONDS);
+			}, 30, TimeUnit.SECONDS);
 	}
 
 	@Bean
