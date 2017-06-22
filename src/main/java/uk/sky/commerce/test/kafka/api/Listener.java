@@ -15,7 +15,7 @@ public class Listener {
 
 	public Collection<String> dataQueue = new ConcurrentLinkedDeque<>();
 
-	@KafkaListener(topicPattern = "TOPIC[0-9]+", containerGroup = "consumer_group")
+	@KafkaListener(topicPattern = "TOPIC[0-9]+")
 	public void listen(List<String> data) {
 		Random rand = new Random();
 		dataQueue.addAll(data);
