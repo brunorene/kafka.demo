@@ -1,6 +1,6 @@
 server.port: ${SERVER_PORT:8080}
 #logging.level.org.apache.kafka: DEBUG
 spring.kafka:
-  bootstrap-servers: 192.168.1.6:32800,192.168.1.6:32801,192.168.1.6:32802
-  listener.concurrency: 10
+  bootstrap-servers: 10.241.10.18:32774,10.241.10.18:32775,10.241.10.18:32776
+  listener.concurrency: ${CONCURRENCY:100}
   consumer.group-id: consumer_group

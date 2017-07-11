@@ -28,3 +28,7 @@ dependencies {
 	compile('com.google.guava:guava:22.0')
 	compile('org.springframework.kafka:spring-kafka:1.2.2.RELEASE')
 }
+
+bootRun {
+	jvmArgs = ['-XX:NativeMemoryTracking=summary']
+}
